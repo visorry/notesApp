@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const notesRoutes = require('./routes/notes.route');
 const userRoute = require('./routes/user.route')
 const app = express();
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 const connect = require('./config/db')
 app.use('/notes', notesRoutes);
